@@ -8,14 +8,14 @@ public class Pacientes {
         System.out.println("Ingrese su nombre:");
         this.nombre=sc.nextLine();
         do {
-            System.out.println("Ingrese su edad (mayor que 0):");
+            System.out.println("Ingrese su edad:");
             this.edad = sc.nextInt();
-            if (edad <= 0) {
+            if (edad <= 0 || edad>=120) {
                 System.out.println("Edad inválida. Intente de nuevo.");
             }
-        } while (edad <= 0);
+        } while (edad <= 0 || edad>=120);
 
-        System.out.println("Ingrese su número de documento:");
+        System.out.println("Ingrese su DNI:");
         DNI = sc.nextInt();
         sc.nextLine();
 

@@ -6,14 +6,14 @@ import java.util.Scanner;
 public class Doctores {
     private int codigo;
     private String nombre, especialidad;
-    private LocalTime horaInicio, horaFin;
     private static int contador_doctores = 1;
+    private LocalTime horaInicio, horaFin;
     public Doctores(Scanner sc){
         System.out.println("Ingrese su nombre:");
         this.nombre=sc.nextLine();
         System.out.println("Ingrese su especialidad:");
         this.especialidad=sc.nextLine();
-        System.out.println("Horarios de Ateción:");
+        System.out.println("Horarios de Atención:");
         DateTimeFormatter formatoHora = DateTimeFormatter.ofPattern("HH:mm");
         boolean valido = false;
         while (!valido) {
