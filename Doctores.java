@@ -8,6 +8,7 @@ public class Doctores {
     private String nombre, especialidad;
     private static int contador_doctores = 1;
     private LocalTime horaInicio, horaFin;
+    
     public Doctores(Scanner sc){
         System.out.println("Ingrese su nombre:");
         this.nombre=sc.nextLine();

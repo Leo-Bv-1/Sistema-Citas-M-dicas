@@ -12,6 +12,7 @@ public class Sistema {
         this.sc = new Scanner(System.in);
         this.lista_doctores = new ArrayList<>();
         this.lista_pacientes = new ArrayList<>();
+        this.lista_citas = new ArrayList<>();
         this.sesionActiva = true;
     }
     public char bienvenida() {
@@ -19,7 +20,7 @@ public class Sistema {
         System.out.println("¿Deseas comenzar? (s/n)");
         return sc.next().charAt(0);
     }
-
+    
     public void iniciar(){
         sc.nextLine();
         while(sesionActiva) {
@@ -54,7 +55,9 @@ public class Sistema {
                 case "2":
                     System.out.println("--------------------------------");
                     System.out.println("-------SACANDO CITA-------");
+
                     lista_citas.add(new Citas(sc, lista_pacientes, lista_doctores, lista_citas));
+                    sc.nextLine();
                 case "3":
                     System.out.println("--------------------------------");
                     System.out.println("-------MENU LISTA DE CITAS-------");

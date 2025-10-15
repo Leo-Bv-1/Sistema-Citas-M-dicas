@@ -37,8 +37,8 @@ public class Pacientes {
 
     public String toString() {
         return "Paciente #" + codigo + 
-               " | Nombre: " + nombre + 
-               " | Edad: " + edad + 
-               " | DNI: " + DNI;
+                " | Nombre: " + nombre + 
+                " | Edad: " + edad + 
+                " | DNI: " + DNI;
     }
 }

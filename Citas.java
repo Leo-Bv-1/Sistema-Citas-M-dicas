@@ -51,7 +51,7 @@ public class Citas {
         System.out.println("Doctores disponibles:");
         for (Doctores d : doctoresEncontrados) {
             System.out.println("Código: " + d.getCodigo() + " | " + d.getNombre() +
-                               " | Horario: " + d.getHorarioAtencion());
+                                " | Horario: " + d.getHorarioAtencion());
         }
 
         System.out.println("Ingrese el código del doctor con el que desea la cita:");
@@ -91,15 +91,16 @@ public class Citas {
 
                 //  Validar que el doctor no tenga otra cita a la misma hora y fecha
                 boolean ocupado = false;
-                for (Citas c : listaCitas) {
-                    if (c.getDoctor().getCodigo() == doctor.getCodigo() &&
-                        c.getFecha().equals(fecha) &&
-                        c.getHora().equals(hora)) {
-                        ocupado = true;
-                        break;
+                if (listaCitas != null) {
+                    for (Citas c : listaCitas) {
+                        if (c.getDoctor().getCodigo() == doctor.getCodigo() &&
+                            c.getFecha().equals(fecha) &&
+                            c.getHora().equals(hora)) {
+                            ocupado = true;
+                            break;
+                        }
                     }
                 }
-
                 if (ocupado) {
                     System.out.println("El doctor ya tiene una cita en esa fecha y hora. Elija otra hora.");
                 } else {
@@ -131,9 +132,9 @@ public class Citas {
 
     public String toString() {
         return "Cita #" + codigo + " | Paciente: " + paciente.getNombre() +
-               " | Doctor: " + doctor.getNombre() +
-               " | Fecha: " + fecha +
-               " | Hora: " + hora +
-               " | Estado: " + estado;
+                " | Doctor: " + doctor.getNombre() +
+                " | Fecha: " + fecha +
+                " | Hora: " + hora +
+                " | Estado: " + estado;
     }
 }
