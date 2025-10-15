@@ -6,3 +6,4 @@ public class SistemaMedico {
         else sistema_de_citas.despedida();
     }
 }
+
